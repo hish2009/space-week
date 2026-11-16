@@ -1,520 +1,302 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050816">
+  <meta name="description" content="أسبوع الفضاء العالمي - استكشف الكون واكتشف أسرار الفضاء">
+  <title>أسبوع الفضاء العالمي | World Space Week</title>
 
-    <title>أسبوع الفضاء العالمي 🚀</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
-        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="stars"></div>
+  <canvas id="stars"></canvas>
 
-    <!-- ==================== NAVBAR ==================== -->
+  <div class="ambient-glow"></div>
 
-    <header>
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-icon">✦</span>
+      <span>SPACE<span class="brand-light"> WEEK</span></span>
+    </a>
 
-        <nav class="navbar">
+    <nav class="nav-links">
+      <a href="#home" data-i18n="navHome">الرئيسية</a>
+      <a href="#about" data-i18n="navAbout">عن الأسبوع</a>
+      <a href="#importance" data-i18n="navImportance">الأهمية</a>
+      <a href="#explore" data-i18n="navExplore">استكشف</a>
+      <a href="#project" data-i18n="navProject">المشروع</a>
+    </nav>
 
-            <div class="logo">
-                🚀 عالم الفضاء
-            </div>
+    <button id="languageBtn" class="language-btn">
+      ENGLISH
+    </button>
+  </header>
 
-            <ul class="nav-links">
+  <main>
 
-                <li>
-                    <a href="#home">الرئيسية</a>
-                </li>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
 
-                <li>
-                    <a href="#about">عن الأسبوع</a>
-                </li>
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
 
-                <li>
-                    <a href="#importance">الأهمية</a>
-                </li>
-
-                <li>
-                    <a href="#explore">استكشف</a>
-                </li>
-
-            </ul>
-
-            <button class="menu-btn" onclick="toggleMenu()">
-                ☰
-            </button>
-
-        </nav>
-
-    </header>
-    
-            <span class="badge">
-                🌌 WORLD SPACE WEEK
-            </span>
-
-            <h1>
-
-                أسبوع الفضاء
-
-                <span>
-                    العالمي
-                </span>
-
-            </h1>
-
-            <p>
-
-                رحلة مذهلة نحو النجوم، نستكشف فيها أسرار الكون
-                ونتعرف على أهمية علوم الفضاء ومستقبل البشرية.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#about" class="primary-btn">
-                    اكتشف المزيد 🚀
-                </a>
-
-                <a href="#explore" class="secondary-btn">
-                    استكشف الفضاء
-                </a>
-
-            </div>
-
+      <div class="hero-content">
+        <div class="hero-tag" data-i18n="heroTag">
+          ✦ احتفل بعظمة الكون
         </div>
 
+        <h1 data-i18n="heroTitle">
+          أسبوع الفضاء
+          <span>العالمي</span>
+        </h1>
 
-        <!-- الكوكب -->
+        <p class="hero-description" data-i18n="heroDescription">
+          رحلة استثنائية لاكتشاف أسرار الكون،
+          والتعرف على عالم مليء بالإبداع والاكتشافات.
+        </p>
 
-        <div class="planet">
-
-            <div class="earth">
-                🌍
-            </div>
-
-            <div class="orbit orbit-1"></div>
-
-            <div class="orbit orbit-2"></div>
-
+        <div class="hero-buttons">
+          <a href="#about" class="primary-btn" data-i18n="heroButton">
+            اكتشف المزيد ↗
+          </a>
+          <a href="#explore" class="secondary-btn" data-i18n="heroButton2">
+            استكشف الفضاء
+          </a>
         </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>04–10</strong>
+            <span data-i18n="statOne">أكتوبر</span>
+          </div>
+          <div>
+            <strong>1999</strong>
+            <span data-i18n="statTwo">بداية الاحتفال</span>
+          </div>
+          <div>
+            <strong>∞</strong>
+            <span data-i18n="statThree">اكتشافات بلا حدود</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="planet-container">
+        <div class="planet-ring"></div>
+        <div class="planet"></div>
+        <div class="planet-glow"></div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span data-i18n="scroll">اكتشف المزيد</span>
+        <div>↓</div>
+      </div>
 
     </section>
 
-
-    <!-- ==================== ABOUT ==================== -->
-
+    <!-- About -->
     <section id="about" class="section">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="aboutEyebrow">ABOUT THE EVENT</span>
+        <h2 data-i18n="aboutTitle">ما هو أسبوع الفضاء العالمي؟</h2>
+        <p data-i18n="aboutDescription">
+          مناسبة عالمية تحتفي بإنجازات الإنسان في علوم الفضاء
+          والتكنولوجيا واستكشاف الكون.
+        </p>
+      </div>
 
-        <div class="section-title">
-
-            <span>
-                01
-            </span>
-
-            <h2>
-                ما هو أسبوع الفضاء العالمي؟
-            </h2>
-
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="card-icon">🌍</span>
+          <h3 data-i18n="aboutCard1Title">احتفال عالمي</h3>
+          <p data-i18n="aboutCard1">
+            يشارك العالم في فعاليات وأنشطة تعليمية تهدف إلى نشر علوم الفضاء.
+          </p>
         </div>
 
-
-        <div class="about-grid">
-
-
-            <div class="about-text">
-
-                <p>
-
-                    أسبوع الفضاء العالمي هو احتفال عالمي يقام كل عام
-                    للتعريف بأهمية علوم وتكنولوجيا الفضاء ودورها في
-                    تطوير حياة الإنسان.
-
-                </p>
-
-
-                <p>
-
-                    ويجمع هذا الحدث الطلاب والمعلمين والعلماء والمؤسسات
-                    من مختلف أنحاء العالم للمشاركة في أنشطة تعليمية
-                    وفعاليات مرتبطة بالفضاء.
-
-                </p>
-
-
-                <div class="quote">
-
-                    "الفضاء ليس مجرد مكان بعيد، بل هو مستقبل البشرية."
-
-                </div>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <div class="icon">
-                    🌎
-                </div>
-
-                <h3>
-                    احتفال عالمي
-                </h3>
-
-                <p>
-
-                    يشارك فيه أشخاص ومؤسسات من مختلف دول العالم.
-
-                </p>
-
-            </div>
-
+        <div class="about-card">
+          <span class="card-icon">🚀</span>
+          <h3 data-i18n="aboutCard2Title">الابتكار والتكنولوجيا</h3>
+          <p data-i18n="aboutCard2">
+            التعرف على التطورات العلمية والتقنيات الحديثة في مجال الفضاء.
+          </p>
         </div>
 
+        <div class="about-card">
+          <span class="card-icon">🔭</span>
+          <h3 data-i18n="aboutCard3Title">اكتشاف المستقبل</h3>
+          <p data-i18n="aboutCard3">
+            إلهام الأجيال القادمة للمشاركة في صناعة مستقبل استكشاف الكون.
+          </p>
+        </div>
+      </div>
     </section>
 
-
-    <!-- ==================== IMPORTANCE ==================== -->
-
+    <!-- Importance -->
     <section id="importance" class="section dark-section">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="importanceEyebrow">WHY SPACE MATTERS</span>
+        <h2 data-i18n="importanceTitle">لماذا نهتم بالفضاء؟</h2>
+        <p data-i18n="importanceDescription">
+          الفضاء ليس مجرد نجوم وكواكب، بل عالم من العلوم والفرص.
+        </p>
+      </div>
 
+      <div class="importance-grid">
 
-        <div class="section-title center">
-
-            <span>
-                02
-            </span>
-
-            <h2>
-                لماذا الفضاء مهم؟
-            </h2>
-
+        <div class="importance-item">
+          <span>🛰️</span>
+          <h3 data-i18n="importance1Title">الاتصالات</h3>
+          <p data-i18n="importance1">تساعد الأقمار الصناعية في تطوير الاتصالات العالمية.</p>
         </div>
 
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🔬
-                </div>
-
-                <h3>
-                    العلم
-                </h3>
-
-                <p>
-
-                    يساعدنا استكشاف الفضاء على فهم الكون
-                    وتطوير العلوم.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🛰️
-                </div>
-
-                <h3>
-                    التكنولوجيا
-                </h3>
-
-                <p>
-
-                    تقنيات الفضاء تساهم في تطوير الاتصالات
-                    والملاحة ومراقبة الأرض.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🌍
-                </div>
-
-                <h3>
-                    حماية الأرض
-                </h3>
-
-                <p>
-
-                    تساعد الأقمار الصناعية العلماء على مراقبة
-                    المناخ والبيئة والكوارث الطبيعية.
-
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    👨‍🚀
-                </div>
-
-                <h3>
-                    المستقبل
-                </h3>
-
-                <p>
-
-                    استكشاف الفضاء يفتح فرصًا جديدة
-                    للأجيال القادمة.
-
-                </p>
-
-            </div>
-
+        <div class="importance-item">
+          <span>🌦️</span>
+          <h3 data-i18n="importance2Title">الطقس والمناخ</h3>
+          <p data-i18n="importance2">تساعد تقنيات الفضاء في مراقبة الأرض والتنبؤ بالطقس.</p>
         </div>
 
+        <div class="importance-item">
+          <span>🔬</span>
+          <h3 data-i18n="importance3Title">البحث العلمي</h3>
+          <p data-i18n="importance3">تفتح الأبحاث الفضائية أبوابًا جديدة للمعرفة.</p>
+        </div>
+
+      </div>
     </section>
 
-
-    <!-- ==================== EXPLORE ==================== -->
-
+    <!-- Explore -->
     <section id="explore" class="section">
-
-
-        <div class="section-title center">
-
-            <span>
-                03
-            </span>
-
-            <h2>
-                رحلة إلى الفضاء
-            </h2>
-
-        </div>
-
-
-        <div class="space-grid">
-
-
-            <div class="space-card">
-
-                <div class="space-image">
-                    🌙
-                </div>
-
-                <h3>
-                    القمر
-                </h3>
-
-                <p>
-
-                    أقرب جار طبيعي للأرض وأحد أهم أهداف
-                    الاستكشاف الفضائي.
-
-                </p>
-
-            </div>
-
-
-            <div class="space-card">
-
-                <div class="space-image">
-                    🔴
-                </div>
-
-                <h3>
-                    المريخ
-                </h3>
-
-                <p>
-
-                    كوكب مثير للاهتمام بسبب احتمالية وجود
-                    آثار للحياة في الماضي.
-
-                </p>
-
-            </div>
-
-
-            <div class="space-card">
-
-                <div class="space-image">
-                    🪐
-                </div>
-
-                <h3>
-                    الكواكب
-                </h3>
-
-                <p>
-
-                    يحتوي نظامنا الشمسي على مجموعة متنوعة
-                    من الكواكب والأجرام السماوية.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== MISSION ==================== -->
-
-    <section class="mission">
-
-        <div>
-
-            <span>
-                🚀 DREAM • DISCOVER • EXPLORE
-            </span>
-
-
-            <h2>
-
-                انظر إلى السماء...
-
-                <br>
-
-                فربما يكون مستقبلك هناك.
-
-            </h2>
-
-
-            <button onclick="showMessage()">
-
-                اضغط هنا ✨
-
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== PROJECT INFORMATION ==================== -->
-
-    <section class="student-info">
-
-
-        <div class="student-card">
-
-
-            <span>
-                🚀 WORLD SPACE WEEK PROJECT
-            </span>
-
-
-            <h2>
-                Project Team
-            </h2>
-
-
-            <p>
-
-                <strong>
-                    Student Design:
-                </strong>
-
-                <br>
-
-                Hisham Mohammed Haroon
-
-                <br>
-
-                Prince Abdulmohsen bin Abdulaziz Secondary School
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Program Coordinator:
-                </strong>
-
-                <br>
-
-                Dr. Wail Zain Fakherji
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Teacher Supervisor:
-                </strong>
-
-                <br>
-
-                ALNAKHLY, HASSAN AHMAD M
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    School Principal:
-                </strong>
-
-                <br>
-
-                Bandar Saad Al-Jabri
-
-            </p>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer>
-
-        <div class="footer-logo">
-
-            🚀 عالم الفضاء
-
-        </div>
-
-
-        <p>
-
-            موقع تعليمي عن أسبوع الفضاء العالمي
-
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="exploreEyebrow">EXPLORE THE UNIVERSE</span>
+        <h2 data-i18n="exploreTitle">رحلة إلى أعماق الكون</h2>
+        <p data-i18n="exploreDescription">
+          تعرف على بعض العوالم المذهلة في مجموعتنا الشمسية.
         </p>
+      </div>
 
+      <div class="space-cards">
 
-        <p class="copyright">
+        <article class="space-card">
+          <div class="space-visual earth-visual">🌍</div>
+          <div class="space-card-content">
+            <span data-i18n="planet1Label">OUR HOME</span>
+            <h3 data-i18n="planet1Title">الأرض</h3>
+            <p data-i18n="planet1Description">
+              كوكبنا الجميل، موطن الحياة في المجموعة الشمسية.
+            </p>
+          </div>
+        </article>
 
-            © 2026 جميع الحقوق محفوظة
+        <article class="space-card">
+          <div class="space-visual mars-visual">🔴</div>
+          <div class="space-card-content">
+            <span data-i18n="planet2Label">THE RED PLANET</span>
+            <h3 data-i18n="planet2Title">المريخ</h3>
+            <p data-i18n="planet2Description">
+              كوكب أحمر يثير اهتمام العلماء والباحثين.
+            </p>
+          </div>
+        </article>
 
+        <article class="space-card">
+          <div class="space-visual saturn-visual">🪐</div>
+          <div class="space-card-content">
+            <span data-i18n="planet3Label">THE RINGED PLANET</span>
+            <h3 data-i18n="planet3Title">زحل</h3>
+            <p data-i18n="planet3Description">
+              يتميز بحلقاته الرائعة التي تجعله فريدًا.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission-section">
+      <div class="mission-content">
+        <span class="eyebrow" data-i18n="missionEyebrow">OUR MISSION</span>
+        <h2 data-i18n="missionTitle">
+          المستقبل يبدأ من هنا...
+        </h2>
+        <p data-i18n="missionDescription">
+          بالعلم والخيال والابتكار، نستطيع أن نصل إلى آفاق جديدة
+          ونصنع مستقبلًا أفضل للبشرية.
         </p>
+        <a href="#project" class="primary-btn" data-i18n="missionButton">
+          تعرف على المشروع ↗
+        </a>
+      </div>
+    </section>
 
-    </footer>
+    <!-- Project Information -->
+    <section id="project" class="section project-section">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="projectEyebrow">THE PROJECT</span>
+        <h2 data-i18n="projectTitle">معلومات المشروع</h2>
+        <p data-i18n="projectDescription">
+          هذا الموقع مشروع تعليمي للتعريف بأسبوع الفضاء العالمي.
+        </p>
+      </div>
 
+      <div class="project-info">
 
-    <script src="script.js"></script>
+        <div class="project-info-item">
+          <span data-i18n="studentLabel">تصميم الطالب</span>
+          <strong>Hisham Mohammed Haroon</strong>
+        </div>
+
+        <div class="project-info-item">
+          <span data-i18n="schoolLabel">المدرسة</span>
+          <strong>Prince Abdulmohsen bin Abdulaziz Secondary School</strong>
+        </div>
+
+        <div class="project-info-item">
+          <span data-i18n="coordinatorLabel">منسق البرنامج</span>
+          <strong>Dr. Wail Zain Fakherji</strong>
+        </div>
+
+        <div class="project-info-item">
+          <span data-i18n="supervisorLabel">المعلم المشرف</span>
+          <strong>ALNAKHLY, HASSAN AHMAD M</strong>
+        </div>
+
+        <div class="project-info-item">
+          <span data-i18n="principalLabel">مدير المدرسة</span>
+          <strong>Bandar Saad Al-Jabri</strong>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="brand">
+      <span class="brand-icon">✦</span>
+      SPACE WEEK
+    </div>
+
+    <p data-i18n="footerText">
+      استكشف الكون، فالمعرفة ليس لها حدود.
+    </p>
+
+    <span class="copyright">
+      © 2026 World Space Week Project
+    </span>
+  </footer>
+
+  <button id="topBtn" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 
 </body>
-
 </html>
